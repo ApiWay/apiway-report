@@ -13,6 +13,6 @@ RUN npm install apiway-report -g
 
 COPY . /usr/src/app
 
-EXPOSE 8080
+EXPOSE 20
 
-CMD [ "npm", "run", "pod" ]
+CMD [ "npm", "run", "start" ]

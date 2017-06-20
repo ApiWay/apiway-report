@@ -21,11 +21,15 @@
   },
   "homepage": "https://github.com/kyewonseo/apiway-report#readme",
   "dependencies": {
+    "aws-sdk": "^2.72.0",
     "body-parser": "^1.17.2",
     "cookie-parser": "^1.4.3",
     "debug": "~2.6.3",
     "express": "~4.15.2",
+    "express-formidable": "^1.0.0",
     "jade": "^1.11.0",
-    "morgan": "^1.8.2"
+    "morgan": "^1.8.2",
+    "multer": "^1.3.0",
+    "multer-s3": "^2.7.0"
   }
 }
