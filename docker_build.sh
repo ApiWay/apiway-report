@@ -13,4 +13,9 @@ docker build -t $REPOSITORY:$TAG .
 docker tag $REPOSITORY:$TAG $AWS_CONTAINER_REGISTRY/$REPOSITORY:$TAG
 docker push $AWS_CONTAINER_REGISTRY/$REPOSITORY:$TAG
 
+if [ $? -ne 0 ]; then
+    echo "rolling-update --rollback"
+    kubectl rolling-update $REPOSITORY --rollback=true
+fi
+
 rm -f ecr_login.sh
